@@ -1,0 +1,55 @@
+body {
+  font-family: 'Raleway', serif;
+}
+
+h1 {
+  display: block;
+  color: #0E5C7F;
+  text-align: center;
+}
+#current_quiz {
+  display: block;
+  margin: auto;
+  color: white;
+  text-align: center;
+  border-color: #1BB8FF;
+  border: 2px solid #1BB8FF;
+  border-radius: 10px;
+  width: 75%;
+  padding: 20px;
+  height: 20px;
+  background-color: #1BB8FF;
+}
+
+#current_quiz:hover {
+  background-color: #B2E9FF;
+  color: #0E5C7F;
+  transition:0.5s;
+  border-radius: 10px;
+  border: 2px solid #1BB8FF;
+  border-color: #1BB8FF;
+}
+
+.answer {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  color: white;
+  text-align: center;
+  border-color: #1BB8FF;
+  border: 2px solid #1BB8FF;
+  border-radius: 10px;
+  width: 75%;
+  padding: 20px;
+  height: 20px;
+  background-color: #1BB8FF;
+}
+
+.answer:hover {
+  background-color: #B2E9FF;
+  color: #0E5C7F;
+  transition:0.5s;
+  border-radius: 10px;
+  border: 2px solid #1BB8FF;
+  border-color: #1BB8FF;
+}
