@@ -17,13 +17,14 @@ $(document).ready(function(){
 
   function renderChoices(request) {
     request.done(function(response){
+      debugger;
       $('#current_quiz').remove();
       $('h1').text(response.question.question);
       var arrayOfChoices = response.question.choices;
 
       for(var i = 1; i <arrayOfChoices.length + 1; i++) {
 
-        $('#choices').append('<div class="answer" id='+i+'>' + arrayOfChoices[i - 1].choice + '<br> </div>');
+        $('#choices').append('<a href="#" class="answer" id='+i+'>' + arrayOfChoices[i - 1].choice + '<br></a>');
       }
       attachListenersToChoices()
     })
@@ -34,7 +35,7 @@ $(document).ready(function(){
   }
 
   function sendAnswer(pickedAnswer) {
-    var chosenAnswer = $.ajax({url: 'questions/1/answers.json', method: 'post', data: {session_key:'kenisawesomesauce', choice_id: this.id}
+    var chosenAnswer = $.ajax({url: 'questions/1/answers.json', method: 'post', data: {session_key:'whatthefuck', choice_id: this.id}
     });
     chosenAnswer.done(function(response){
       nextQuestion();

@@ -7,6 +7,16 @@ h1 {
   color: #0C4C66;
   text-align: center;
 }
+
+a {
+  text-decoration:none;
+  color: white;
+}
+
+a:hover {
+  color: #0E5C7F;
+}
+
 #current_quiz {
   display: block;
   margin: auto;
