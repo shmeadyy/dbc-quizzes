@@ -4,7 +4,7 @@ body {
 
 h1 {
   display: block;
-  color: #0E5C7F;
+  color: #0C4C66;
   text-align: center;
 }
 #current_quiz {
@@ -12,13 +12,13 @@ h1 {
   margin: auto;
   color: white;
   text-align: center;
-  border-color: #1BB8FF;
-  border: 2px solid #1BB8FF;
+  border-color: #1586B2;
+  border: 2px solid #1586B2;
   border-radius: 10px;
   width: 75%;
   padding: 20px;
   height: 20px;
-  background-color: #1BB8FF;
+  background-color: #1586B2;
 }
 
 #current_quiz:hover {
@@ -27,7 +27,7 @@ h1 {
   transition:0.5s;
   border-radius: 10px;
   border: 2px solid #1BB8FF;
-  border-color: #1BB8FF;
+  border-color: #0E5C7F;
 }
 
 .answer {
@@ -36,13 +36,13 @@ h1 {
   margin-top: 15px;
   color: white;
   text-align: center;
-  border-color: #1BB8FF;
-  border: 2px solid #1BB8FF;
+  border-color: #1586B2;
+  border: 2px solid #1586B2;
   border-radius: 10px;
   width: 75%;
   padding: 20px;
   height: 20px;
-  background-color: #1BB8FF;
+  background-color: #1586B2;
 }
 
 .answer:hover {
@@ -51,5 +51,5 @@ h1 {
   transition:0.5s;
   border-radius: 10px;
   border: 2px solid #1BB8FF;
-  border-color: #1BB8FF;
+  border-color: #0E5C7F;
 }

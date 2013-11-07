@@ -10,7 +10,7 @@ $(document).ready(function(){
   }
 
   function grabQuestions(e) {
-    var request = $.ajax({url: 'http://localhost:3000/quizzes/1/questions/next.json', method: 'get', data: {session_key: 'kenisawesomesauce'}
+    var request = $.ajax({url: 'http://localhost:3000/quizzes/1/questions/next.json', method: 'get', data: {session_key: 'whatthefuck'}
     });
     renderChoices(request);
   }
@@ -21,17 +21,30 @@ $(document).ready(function(){
       $('h1').text(response.question.question);
       var arrayOfChoices = response.question.choices;
 
-      for(var i = 0; i <arrayOfChoices.length; i++) {
-        $('#choices').append('<div class="answer", id='+i+'>' + arrayOfChoices[i].choice + '<br> </div>');
+      for(var i = 1; i <arrayOfChoices.length + 1; i++) {
+
+        $('#choices').append('<div class="answer" id='+i+'>' + arrayOfChoices[i - 1].choice + '<br> </div>');
       }
+      attachListenersToChoices()
     })
   }
 
+  function attachListenersToChoices() {
+    $('.answer').on('click', sendAnswer)
+  }
 
-  // function nextQuestion(e){
-  //   var request = $.ajax({url:'http://localhost:3000/quizzes/1/answers.json', method:'post', data: {session_key: 'kenisawesomesauce'}
-  //   });
-  //   renderChoices(e);
+  function sendAnswer(pickedAnswer) {
+    var chosenAnswer = $.ajax({url: 'questions/1/answers.json', method: 'post', data: {session_key:'kenisawesomesauce', choice_id: this.id}
+    });
+    chosenAnswer.done(function(response){
+      nextQuestion();
+    })
+  };
 
-  // }
+  function nextQuestion(){
+    var request = $.ajax({url: 'http://localhost:3000/quizzes/1/questions/next.json', method: 'get', data: {session_key: 'whatthefuck'}
+    });
+    request.done(function(response) {
+    })
+  }
 });
